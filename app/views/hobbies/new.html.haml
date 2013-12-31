@@ -1,0 +1,7 @@
+.row
+	.span5.col-md-offset-1
+		= form_for(@hobby, method: :post) do |h|
+			= render :partial => 'form', locals: { h: h }
+			%dt
+			%dd
+				= h.button 'Create', class: "btn btn-primary", disable_with: 'creating...'
