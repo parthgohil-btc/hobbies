@@ -1,12 +1,13 @@
 - if current_user.present?
-	.row{style: "width: 500px; margin-bottom: 18px;"}
-		.span3.col-md-offset-1
+	.row
+		.span3.col-md-offset-1{ style: "width: 500px;" }
+			%h4 Hobbies
 			.nav.pull-left
-				%a.btn.btn-primary{ :href => new_hobbies_path }
+				%a.btn.btn-primary{ :href => new_hobbies_path, style: "margin-bottom: 18px;" }
 					New hobby
-	.row{style: "width: 500px;"}
+	.row
 		.span3.col-md-offset-1
-			%table.table.table-hover
+			%table.table.table-hover{ style: "width: 500px;" }
 				%th
 					name
 				%th
@@ -15,6 +16,6 @@
 						%tr
 							%td
 								= link_to hobby.name, edit_hobbies_path(hobby.id), method: :get
-							%td{style: "text-align:right"}
+							%td{ style: "text-align:right" }
 								%a.glyphicon.glyphicon-remove{ :href => destroy_hobbies_path(hobby.id) }
 								=# link_to "delete", destroy_hobbies_path(hobby.id), method: :post, disable_with: 'deleting...'

@@ -1,5 +1,6 @@
 .row
 	.span5.col-md-offset-1
+		%h4 New Hobby
 		= form_for(@hobby, method: :post) do |h|
 			= render :partial => 'form', locals: { h: h }
 			%dt
